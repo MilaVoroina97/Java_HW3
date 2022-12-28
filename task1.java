@@ -15,6 +15,10 @@ public class task1 {
         int n = sc.nextInt();
         List<Integer> rand = fillRandom(n);
         int[] result = rand.stream().mapToInt(i -> i).toArray();
+        for(int i : result){
+            System.out.println(i);
+        }
+        System.out.println("Array after sorting: ");
         mergeSort(result, n);
         for(int h : result){
             System.out.println(h);
@@ -25,7 +29,7 @@ public class task1 {
     public static List<Integer> fillRandom(int size){
         List<Integer> res = new ArrayList<>();
         for(int i = 0; i < size; i++){
-            res.add(new Random().nextInt(10));
+            res.add(new Random().nextInt(100));
         }
         return res;
     }
